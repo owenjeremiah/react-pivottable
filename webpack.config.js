@@ -1,9 +1,15 @@
-var webpack = require('webpack');
+// const path = require("path");
+// const webpack = require("webpack");
+const ReactRefreshWebpackPlugin = require("@pmmmwh/react-refresh-webpack-plugin");
+
+const isDevelopment = process.env.NODE_ENV !== "production";
 
 module.exports = {
-  entry: ['babel-polyfill', './examples/index.jsx'],
+  mode: isDevelopment ? "development" : "production",
+  // entry: ["babel-polyfill", "./examples/index.jsx"],
+  entry: ["./examples/index.jsx"],
   output: {
-    filename: 'bundle.js',
+    filename: "bundle.js",
   },
   module: {
     rules: [
@@ -11,27 +17,36 @@ module.exports = {
         test: /\.jsx?$/,
         exclude: /node_modules/,
         use: {
-          loader: 'babel-loader',
+          loader: require.resolve("babel-loader"),
           options: {
-            presets: ['@babel/preset-env', '@babel/preset-react'],
+            presets: ["@babel/preset-env", "@babel/preset-react"],
+            plugins: [
+              isDevelopment && require.resolve("react-refresh/babel"),
+            ].filter(Boolean),
           },
         },
       },
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader'],
+        use: ["style-loader", "css-loader"],
       },
     ],
   },
-  plugins: [
-    new webpack.NamedModulesPlugin(),
-    new webpack.HotModuleReplacementPlugin(),
-  ],
+  optimization: {
+    moduleIds: "named",
+  },
+  plugins: [isDevelopment && new ReactRefreshWebpackPlugin()].filter(Boolean),
+  // plugins: [
+  //   new webpack.NamedModulesPlugin(),
+  //   new webpack.HotModuleReplacementPlugin(),
+  // ],
   devServer: {
-    contentBase: './examples',
+    // static: {
+    //   directory: path.join(__dirname, "examples"),
+    // },
     hot: true,
   },
   resolve: {
-    extensions: ['.js', '.jsx'],
+    extensions: [".js", ".jsx"],
   },
 };
