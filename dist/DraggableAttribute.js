@@ -8,7 +8,6 @@ exports.DraggableAttribute = DraggableAttribute;
 exports["default"] = void 0;
 var _react = _interopRequireWildcard(require("react"));
 var _reactDraggable = _interopRequireDefault(require("react-draggable"));
-var _s = $RefreshSig$();
 function _interopRequireDefault(e) { return e && e.__esModule ? e : { "default": e }; }
 function _getRequireWildcardCache(e) { if ("function" != typeof WeakMap) return null; var r = new WeakMap(), t = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(e) { return e ? t : r; })(e); }
 function _interopRequireWildcard(e, r) { if (!r && e && e.__esModule) return e; if (null === e || "object" != _typeof(e) && "function" != typeof e) return { "default": e }; var t = _getRequireWildcardCache(r); if (t && t.has(e)) return t.get(e); var n = { __proto__: null }, a = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var u in e) if ("default" !== u && {}.hasOwnProperty.call(e, u)) { var i = a ? Object.getOwnPropertyDescriptor(e, u) : null; i && (i.get || i.set) ? Object.defineProperty(n, u, i) : n[u] = e[u]; } return n["default"] = e, t && t.set(e, n), n; }
@@ -20,7 +19,6 @@ function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" !=
 function _arrayWithHoles(r) { if (Array.isArray(r)) return r; }
 /* eslint-disable react/prop-types */
 function DraggableAttribute(_ref) {
-  _s();
   var attrValues = _ref.attrValues,
     menuLimit = _ref.menuLimit,
     name = _ref.name,
@@ -132,9 +130,5 @@ function DraggableAttribute(_ref) {
     onClick: toggleFilterBox
   }, "\xA0\u25BE")), open ? getFilterBox() : null);
 }
-_s(DraggableAttribute, "famVn/3e71Dp78mczf6TJcicOn8=");
-_c = DraggableAttribute;
 var _default = exports["default"] = DraggableAttribute;
-var _c;
-$RefreshReg$(_c, "DraggableAttribute");
 //# sourceMappingURL=DraggableAttribute.js.map

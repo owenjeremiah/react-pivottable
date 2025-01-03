@@ -9,7 +9,7 @@ function _interopRequireDefault(e) { return e && e.__esModule ? e : { "default":
 /* eslint-disable react/prop-types */
 // eslint can't see inherited propTypes!
 
-var Dropdown = exports.Dropdown = /*#__PURE__*/_react["default"].memo(_c = function Dropdown(_ref) {
+var Dropdown = exports.Dropdown = /*#__PURE__*/_react["default"].memo(function Dropdown(_ref) {
   var current = _ref.current,
     open = _ref.open,
     setValue = _ref.setValue,
@@ -48,9 +48,5 @@ var Dropdown = exports.Dropdown = /*#__PURE__*/_react["default"].memo(_c = funct
     }, r);
   })));
 });
-_c2 = Dropdown;
 var _default = exports["default"] = Dropdown;
-var _c, _c2;
-$RefreshReg$(_c, "Dropdown$React.memo");
-$RefreshReg$(_c2, "Dropdown");
 //# sourceMappingURL=Dropdown.js.map

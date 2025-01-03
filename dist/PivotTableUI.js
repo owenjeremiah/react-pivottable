@@ -13,7 +13,6 @@ var _Dropdown = require("./Dropdown");
 var _Utilities = require("./Utilities");
 var _PivotTable = _interopRequireDefault(require("./PivotTable"));
 var _TableRenderers = _interopRequireDefault(require("./TableRenderers"));
-var _s = $RefreshSig$();
 var _excluded = ["onChange", "hiddenAttributes", "hiddenFromAggregators", "hiddenFromDragDrop", "unusedOrientationCutoff", "menuLimit", "data"]; // import Draggable from "react-draggable";
 // import PropTypes from "prop-types";
 // import update from "immutability-helper";
@@ -40,7 +39,6 @@ function _objectWithoutPropertiesLoose(r, e) { if (null == r) return {}; var t =
 
 // export const PivotTableUI = React.memo(function PivotTableUI({
 function PivotTableUI(_ref) {
-  _s();
   var onChange = _ref.onChange,
     _ref$hiddenAttributes = _ref.hiddenAttributes,
     hiddenAttributes = _ref$hiddenAttributes === void 0 ? [] : _ref$hiddenAttributes,
@@ -389,9 +387,5 @@ function PivotTableUI(_ref) {
   }, /*#__PURE__*/_react["default"].createElement("tr", null, /*#__PURE__*/_react["default"].createElement(RendererCell, null), /*#__PURE__*/_react["default"].createElement(AggregatorCell, null), /*#__PURE__*/_react["default"].createElement(ColAttrsCell, null)), /*#__PURE__*/_react["default"].createElement("tr", null, /*#__PURE__*/_react["default"].createElement(UnusedAttrsCell, null), /*#__PURE__*/_react["default"].createElement(RowAttrsCell, null), /*#__PURE__*/_react["default"].createElement(OutputCell, null))));
 }
 // });
-_s(PivotTableUI, "yBvIyFJLT7DXDdiKNTKIdAqfUgE=");
-_c = PivotTableUI;
 var _default = exports["default"] = PivotTableUI;
-var _c;
-$RefreshReg$(_c, "PivotTableUI");
 //# sourceMappingURL=PivotTableUI.js.map
